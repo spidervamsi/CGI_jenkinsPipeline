@@ -1,23 +1,12 @@
-pipeline { 
-    agent any  
-     tools {
-       maven 'LOCALMAVEN'
-   }
-   stages {
-       stage('Build') {
-           steps {
-               //sh "mvn build"
-               try {
-                   sh "mvn build"
-                 // do some maven magic
-                } catch (error) {
-                   throw error
-                } finally {
-                    echo "finally boss"
-                   }
-               echo "clean package completed boss"
-           }
-       }
+
+node {
+   checkout scm
+   // do some stuff
+   try {
+       sh "mvn clean package"
+   } catch (error) {
+       throw error
+   } finally {
+       echo "hey bro"
    }
 }
-
