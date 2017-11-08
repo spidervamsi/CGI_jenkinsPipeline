@@ -1,4 +1,5 @@
 node{
+   try{
 node {
    checkout scm
    // do some stuff
@@ -24,6 +25,7 @@ node {
       echo "this is node 2"
    }
 }
+   }
    
    finally{
        node {
