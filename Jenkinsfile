@@ -6,7 +6,7 @@ pipeline {
    stages {
        stage('Build') {
            steps {
-               
+               sh "mvn build"
                echo "scm completed boss"
            }
        }
