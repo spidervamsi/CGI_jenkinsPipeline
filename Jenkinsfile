@@ -6,9 +6,10 @@ pipeline {
    stages {
        stage('Build') {
            steps {
-               sh "mvn build"
-               echo "scm completed boss"
+               sh "mvn clean package"
+               echo "clean package completed boss"
            }
        }
    }
 }
+
