@@ -6,7 +6,15 @@ pipeline {
    stages {
        stage('Build') {
            steps {
-               sh "mvn build"
+               //sh "mvn build"
+               try {
+                   sh "mvn build"
+                 // do some maven magic
+                } catch (error) {
+                   throw error
+                } finally {
+                    echo "finally boss"
+                   }
                echo "clean package completed boss"
            }
        }
