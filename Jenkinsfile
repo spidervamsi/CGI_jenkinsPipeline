@@ -6,7 +6,7 @@ pipeline {
    stages {
        stage('Build') {
            steps {
-                checkout scm 
+               
                echo "scm completed boss"
            }
        }
