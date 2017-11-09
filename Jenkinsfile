@@ -1,5 +1,6 @@
 pipeline {
 	agent any
+	stages {
    	stage('test'){
 			steps {
 				sh 'mvn test' 
@@ -24,6 +25,7 @@ pipeline {
 			}
 		}
 
+}
    	post {
    	  	always {
                   echo 'hey I am here'
