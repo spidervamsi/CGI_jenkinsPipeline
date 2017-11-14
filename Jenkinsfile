@@ -11,7 +11,7 @@ pipeline {
               }
    	post {
    	  	always {
-		 echo "Running $ENV.BUILD_ID on $ENV.JENKINS_URL" 
+		 echo "Running $REGISTRY_URL this" 
                   echo 'hey I am here'
 			}
 		}
