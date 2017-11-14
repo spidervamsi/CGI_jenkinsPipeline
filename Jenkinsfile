@@ -3,7 +3,8 @@ pipeline {
 	stages {
    	stage('test'){
 			steps {
-			    echo 'hey im test' 
+			    echo 'hey im test'
+				echo '${BUILD_NO}'
 			sh 'mvn clean package'
 			}
 		}
