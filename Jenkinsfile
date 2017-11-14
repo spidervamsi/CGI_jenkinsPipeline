@@ -11,7 +11,7 @@ pipeline {
               }
    	post {
    	  	always {
-		 echo "Running $REGISTRY_URL this" 
+		 
                   echo 'hey I am here'
 			}
 		}
